@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".principal">
+    
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/azulBCK"
+        app:title="Minhas Denuncias"
+        app:titleTextColor="@color/black" />
+    
+    
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:orientation="vertical"
+            tools:listitem="@layout/item_denuncia"
+            android:layout_marginBottom="130dp"/>
+    
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+               android:id="@+id/bt_novasdenuncias"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentEnd="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginEnd="16dp"
+               android:layout_marginBottom="146dp"
+                android:src="@drawable/ic_add"
+               app:backgroundTint="@color/white"
+               app:rippleColor="@color/cinzaMP"
+                android:contentDescription="Botão para adicionar nova denúncia"
+
+
+            />
+    
+    
+    
+    
+    
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        >
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/facasuadenuncia"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30dp"
+
+            />
+
+        <View
+            android:id="@+id/Container"
+            style="@style/ContainerComponents"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            android:layout_height="400dp"
+
+
+            />
+
+
+        <Spinner
+            android:id="@+id/spinner_opcoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/Container"
+            app:layout_constraintTop_toTopOf="@id/Container"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            style="@style/Edit_text"
+            />
+
+
+        <EditText
+            android:id="@+id/text_localizacao"
+            style="@style/Edit_text"
+            android:inputType="text"
+            android:hint="Local"
+            android:maxLines="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_opcoes"
+
+            />
+
+        <EditText
+            android:id="@+id/text_Descricao"
+            style="@style/Edit_text"
+            android:inputType="text"
+            android:hint="descrição"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_localizacao"
+
+
+            />
+        <Button
+            android:id="@+id/btn_selecionar_imagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecionar Imagem"
+            app:layout_constraintTop_toBottomOf="@id/text_Descricao"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/azulBCK"/>
+
+        <ImageView
+            android:id="@+id/imagePreview"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@id/botaoDenunciar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="30dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botaoDenunciar"
+            style="@style/botaologin"
+            android:text="Denunciar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_selecionar_imagem"
+
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
